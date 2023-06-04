@@ -267,16 +267,14 @@ export default {
       document.title = this.blogInfo.websiteConfig.websiteName;
       if (this.isEn){
         // 一言Api进行打字机循环输出效果
-        fetch("https://api.uixsj.cn/hitokoto/get?type=en&code=json")
+        fetch("https://api.github.com/zen")
           .then(res => {
-            return res.json();
+            console.log(res);
+            return res.text();
           })
-          .then(({ content }) => {
-            const front_en = content.split('。')[0];
-            const en = front_en.split('.')[0];
-            console.log('hi',en);
+          .then(ret => {
             this.obj.speed=150;
-            this.initTyped(en);
+            this.initTyped(ret);
           });
       }else {
         // 一言Api进行打字机循环输出效果

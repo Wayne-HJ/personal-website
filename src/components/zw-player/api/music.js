@@ -9,17 +9,17 @@ export const getMusicInfo = id => {
 };
 //获取歌曲url
 export const getMusicUrl = id => {
-  return axios.post(`https://n.xlz122.cn/api/song/url?id=${id}`);
+  return axios.post(`https://cloud-music-api-wayne.vercel.app/song/url?id=${id}`);
 };
 //获取热门歌曲
 export const getHotMusic = id => {
-  return axios.post(`https://n.xlz122.cn/api/playlist/detail?id=${id}`);
+  return axios.post(`https://cloud-music-api-wayne.vercel.app/playlist/detail?id=${id}`);
 };
 //获取搜索建议
 export const getSearchSuggest = key => {
-  return axios.post(`https://n.xlz122.cn/api/search/suggest?keywords=${key}`);
+  return axios.post(`https://cloud-music-api-wayne.vercel.app/search/suggest?keywords=${key}`);
 };
 //获取歌曲热门评论
 export const getHotTalk = id => {
-  return axios.post(`https://n.xlz122.cn/api/comment/music?id=${id}&limit=3`);
+  return axios.post(`https://cloud-music-api-wayne.vercel.app/comment/music?id=${id}&limit=3`);
 };

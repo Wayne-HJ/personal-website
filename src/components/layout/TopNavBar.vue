@@ -78,11 +78,6 @@
                 <i class="iconfont iconpinglunzu" /> Message
               </router-link>
             </li>
-            <li>
-              <router-link to="/new">
-                <i class="iconfont iconshijian" /> News
-              </router-link>
-            </li>
           </ul>
         </div>
         <div class="menus-item">
