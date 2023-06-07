@@ -13,6 +13,13 @@ module.exports = {
         pathRewrite: {
           "^/api": ""
         }
+      },
+      "/getNews": {
+        target: "https://wayne-news.vercel.app/api",
+        changeOrigin: true,
+        pathRewrite: {
+          "^/getNews": ""
+        }
       }
     },
     disableHostCheck: true

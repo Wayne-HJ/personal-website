@@ -2,21 +2,24 @@
   <div>
     <!-- banner -->
     <div class="banner" :style="cover">
-      <h1 class="banner-title">NEWS</h1>
+      <h1 class="banner-title">EVERY DAY NEWS</h1>
     </div>
     <!-- 标签列表 -->
     <v-card class="blog-container">
-      <div class="tag-cloud-title">tags - {{ count }}</div>
+      <div class="tag-cloud-title">{{ newsTitle }}</div>
+
+      <div class="tag-cloud-stitle">{{ newsDate }}</div>
       <div class="tag-cloud">
-        <router-link
-          :style="{ 'font-size': Math.floor(Math.random() * 10) + 18 + 'px' }"
-          v-for="item of tagList"
-          :key="item.id"
-          :to="'/tags/' + item.id"
+        <div
+          :style="{ 'font-size': '18px','display':'flex','margin':'2px 0px' }"
+          v-for="(item,index) in newsList"
+          :key="index"
         >
-          {{ item.tagName }}
-        </router-link>
+          <div style="color: #bf4643">{{index+1}}.&nbsp;</div>
+          <div>{{ item }}</div>
+        </div>
       </div>
+      <div class="tag-cloud-stitle">{{ sentence }}</div>
     </v-card>
   </div>
 </template>
@@ -28,15 +31,22 @@ export default {
   },
   data: function() {
     return {
-      tagList: [],
-      count: 0
+      newsList: [],
+      newsDate: '',
+      newsTitle: '',
+      sentence: '',
+
     };
   },
   methods: {
     listTags() {
-      this.axios.get("/api/tags").then(({ data }) => {
-        this.tagList = data.data.recordList;
-        this.count = data.data.count;
+      this.axios.get("/getNews").then(({ data }) => {
+        this.newsList = data.data.news;
+        this.newsDate = data.data.date;
+        this.newsTitle = data.data.title;
+        this.sentence = data.data.weiyu.split('】')[1];
+
+
       });
     }
   },
@@ -60,13 +70,21 @@ export default {
   font-size: 36px;
   text-align: center;
 }
+.tag-cloud-stitle {
+  line-height: 2;
+  font-size: 26px;
+  text-align: center;
+}
 @media (max-width: 759px) {
   .tag-cloud-title {
     font-size: 25px;
   }
+  .tag-cloud-stitle {
+    font-size: 15px;
+  }
 }
 .tag-cloud {
-  text-align: center;
+  text-align: left;
 }
 .tag-cloud a {
   color: #616161;

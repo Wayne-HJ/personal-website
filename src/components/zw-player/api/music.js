@@ -1,11 +1,11 @@
 import axios from "axios";
 //获取歌词
 export const getWords = id => {
-  return axios.post(`https://n.xlz122.cn/api/lyric?id=${id}`);
+  return axios.post(`https://cloud-music-api-wayne.vercel.app/lyric?id=${id}`);
 };
 //获取歌曲详情
 export const getMusicInfo = id => {
-  return axios.post(`https://n.xlz122.cn/api/song/detail?ids=${id}`);
+  return axios.post(`https://cloud-music-api-wayne.vercel.app/song/detail?ids=${id}`);
 };
 //获取歌曲url
 export const getMusicUrl = id => {

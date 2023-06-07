@@ -344,6 +344,7 @@ export default {
           }
         });
     }
+
   },
   computed: {
     isRight() {
