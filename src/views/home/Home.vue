@@ -186,7 +186,19 @@
                 v-if="isShowSocial('gitee')"
                 target="_blank"
                 :href="blogInfo.websiteConfig.gitee"
-                class="iconfont icongitee-fill-round"
+                class="mr-5 iconfont icongitee-fill-round"
+              />
+              <a
+                v-if="isShowSocial('linkedin')"
+                target="_blank"
+                :href="blogInfo.websiteConfig.linkedin"
+                class="mr-5 iconf_logo icon-lingying"
+              />
+              <a
+                v-if="isShowSocial('twitter')"
+                target="_blank"
+                :href="blogInfo.websiteConfig.twitter"
+                class="iconf_logo icon-tuite"
               />
             </div>
           </v-card>

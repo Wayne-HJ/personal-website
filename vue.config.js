@@ -5,9 +5,9 @@ module.exports = {
     // public: '0.0.0.0',
     proxy: {
       "/api": {
-        // target: "http://localhost:8089",
+        target: "http://localhost:8089",
         // target: "https://static.jianght.eu.org",
-        target: "http://152.67.102.41:8089",
+        // target: "http://152.67.102.41:8089",
 
         changeOrigin: true,
         pathRewrite: {

@@ -8,6 +8,7 @@ import "./assets/css/index.css";
 import "./assets/css/iconfont.css";
 import "./assets/css/markdown.css";
 import "./assets/css/vue-social-share/client.css";
+import "./assets/icons/logos/iconfont.css";
 import config from "./assets/js/config";
 import Share from "vue-social-share";
 import dayjs from "dayjs";
