@@ -6,9 +6,6 @@ module.exports = {
     proxy: {
       "/api": {
         target: "http://localhost:8089",
-        // target: "https://static.jianght.eu.org",
-        // target: "http://152.67.102.41:8089",
-
         changeOrigin: true,
         pathRewrite: {
           "^/api": ""
