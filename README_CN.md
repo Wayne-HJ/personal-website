@@ -20,9 +20,9 @@
   <a href="https://github.com/Wayne-HJ/personal-website">
     <img src="public/logo.png" alt="Logo" width="80" height="80">
   </a>
-  <h3 align="center">Springboot + Vue 前后端分离个人网站+管理后台</h3>
+  <h3 align="center">Vue 个人网站</h3>
   <p align="center">
-    本项目为vue个人网站前端
+    本项目为个人网站的vue前端
     <br />
     <!-- <a href="https://github.com/Wayne-HJ/personal-website"><strong>Explore the docs »</strong></a> -->
     <!-- <br /> -->
